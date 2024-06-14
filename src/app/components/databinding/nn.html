@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Image</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="toggleContainer">
+        <img src="../../../assests/images/download wwe.png" alt="Default Image" id="toggleImage">
+        <button id="toggleButton">Toggle Image</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById("toggleButton");
+    const toggleImage = document.getElementById("toggleImage");
+    let isImageVisible = true;
+
+    toggleButton.addEventListener("click", function() {
+        if (isImageVisible) {
+            toggleImage.style.display = "none";
+        } else {
+            toggleImage.style.display = "block";
+        }
+        isImageVisible = !isImageVisible;
+    });
+});
+
+</script>
+</html>
